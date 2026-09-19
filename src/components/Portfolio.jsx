@@ -5838,7 +5838,7 @@ const Portfolio = () => {
           height: 52px;
           padding: 0 25px;
           border-radius: 8px;
-          border: 1px solid white;
+          border: 1px solid #20c997 ;
           background: #20c997;
           color: #06110e;
           font-weight: 800;
@@ -5854,6 +5854,7 @@ const Portfolio = () => {
         .send-btn:hover {
           background: white;
           color: black;
+          border:1px solid white;
           transform: translateY(-3px);
         }
 
