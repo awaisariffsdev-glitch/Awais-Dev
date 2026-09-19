@@ -5066,8 +5066,9 @@ const Portfolio = () => {
         }
 
         .primary-btn:hover {
-          background: transparent;
-          color: #20c997;
+          background: white;
+          color: black;
+          border:1px solid white;
           transform: translateY(-4px);
           box-shadow: 0 10px 30px rgba(32, 201, 151, 0.15);
         }
@@ -5079,8 +5080,8 @@ const Portfolio = () => {
         }
 
         .secondary-btn:hover {
-          border-color: #20c997;
-          color: #20c997;
+          border-color: white;
+          color: white;
           transform: translateY(-4px);
         }
 
