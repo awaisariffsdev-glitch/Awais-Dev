@@ -2261,7 +2261,7 @@ import {
 import { SiMongodb, SiExpress } from "react-icons/si";
 import emailjs from "@emailjs/browser";
 import { Link } from "react-router";
-
+// import { Analytics } from "@vercel/analytics/next"
 const Portfolio = () => {
   const [loading, setLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
@@ -2641,7 +2641,6 @@ const Portfolio = () => {
                       </div>
                       <div>
                         <strong>MongoDB</strong>
-                        <span>Database</span>
                       </div>
                     </div>
 
@@ -2651,7 +2650,6 @@ const Portfolio = () => {
                       </div>
                       <div>
                         <strong>Express.js</strong>
-                        <span>Backend</span>
                       </div>
                     </div>
 
@@ -2661,7 +2659,6 @@ const Portfolio = () => {
                       </div>
                       <div>
                         <strong>React</strong>
-                        <span>Frontend</span>
                       </div>
                     </div>
 
@@ -2671,7 +2668,6 @@ const Portfolio = () => {
                       </div>
                       <div>
                         <strong>Node.js</strong>
-                        <span>Runtime</span>
                       </div>
                     </div>
                   </div>
@@ -4716,6 +4712,7 @@ const Portfolio = () => {
     width: 100%;
     max-width: 680px;
   }
+   
 }
 `}</style>
 
