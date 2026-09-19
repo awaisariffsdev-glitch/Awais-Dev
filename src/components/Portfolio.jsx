@@ -21,7 +21,7 @@ import {
 } from "react-icons/fa";
 import { SiMongodb, SiExpress } from "react-icons/si";
 import emailjs from "@emailjs/browser";
-
+import {Link} from 'react-router'
 const Portfolio = () => {
   const [loading, setLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
@@ -815,14 +815,14 @@ const Portfolio = () => {
 
             <div className="footer-bottom">
               © 2026{" "}
-              <a
-                href="https://www.instagram.com/cyb3r.awais/"
+              <Link
+                to="https://www.instagram.com/cyb3r.awais/"
                 target="_blank"
                 rel="noreferrer"
-                className="footer-author"
+                className="footer-author fw-bold"
               >
                 Awais
-              </a>
+              </Link>
               . All Rights Reserved.
             </div>
           </div>
