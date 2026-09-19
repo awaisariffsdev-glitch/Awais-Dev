@@ -3215,7 +3215,6 @@
 //           font-size: 17px;
 //         }
 
-
 //         .skill-card:nth-child(1) .skill-icon {
 //           color: #e34f26;
 //           background: rgba(227,79,38,0.10);
@@ -3682,7 +3681,6 @@
 //           color: #20c997;
 //         }
 
-
 //         .footer-bottom {
 //           padding-top: 22px;
 //           border-top: 1px solid rgba(255,255,255,0.06);
@@ -3872,8 +3870,6 @@
 
 // export default Portfolio;
 
-
-
 import React, { useEffect, useRef, useState } from "react";
 import {
   FaGithub,
@@ -3903,7 +3899,7 @@ const Portfolio = () => {
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(
-    window.location.pathname.replace(/^\//, "") || "home"
+    window.location.pathname.replace(/^\//, "") || "home",
   );
   const navRef = useRef(null);
 
@@ -3986,7 +3982,7 @@ const Portfolio = () => {
         window.history.replaceState(
           { section: currentSection },
           "",
-          desiredPath
+          desiredPath,
         );
       }
     };
@@ -4335,6 +4331,7 @@ const Portfolio = () => {
             </div>
 
             <div className="about-grid">
+              {/* First Card */}
               <div className="about-info">
                 <div className="about-icon">
                   <FaGraduationCap />
@@ -4355,25 +4352,25 @@ const Portfolio = () => {
                 </p>
               </div>
 
+              {/* Second Card (Formatted identically to the first) */}
               <div className="education-card">
-                <h3>Education</h3>
-                <div className="education-item">
-                  <div className="education-icon">
-                    <FaGraduationCap />
-                  </div>
-                  <div>
-                    <h4>ADP CS</h4>
-                    <p>Associate Degree Program</p>
-                    <span>Undergraduate Studies</span>
-                  </div>
+                <div className="about-icon">
+                  <FaGraduationCap />
                 </div>
-
-                <div className="cgpa-box">
-                  <div>
-                    <span>First 2 Semesters</span>
-                    <strong>3.3 CGPA</strong>
-                  </div>
-                  <div className="cgpa-circle">3.3</div>
+                <h3>Education & Academics</h3>
+                <p>
+                  Pursuing an <strong>ADP CS</strong> (Associate Degree Program
+                  in Computer Science) with a focus on core software
+                  fundamentals.
+                </p>
+                <p>
+                  Actively building full-stack engineering skills alongside
+                  undergraduate coursework, bridging theoretical computer
+                  science with practical web architecture.
+                </p>
+                <div className="education-stat">
+                  <span>First 2 Semesters</span>
+                  <strong>3.3 CGPA</strong>
                 </div>
               </div>
             </div>
@@ -4599,21 +4596,21 @@ const Portfolio = () => {
                         "service_ej6dl7s",
                         "template_j1han28",
                         e.currentTarget,
-                        "tKoUFC7TYH7vtKDCM"
+                        "tKoUFC7TYH7vtKDCM",
                       )
                       .then(
                         () => {
                           alert(
-                            "Thank you! Your message has been sent successfully."
+                            "Thank you! Your message has been sent successfully.",
                           );
                           e.target.reset();
                         },
                         (error) => {
                           console.error("EmailJS Error:", error);
                           alert(
-                            "Sorry, your message could not be sent. Please try again."
+                            "Sorry, your message could not be sent. Please try again.",
                           );
-                        }
+                        },
                       );
                   }}
                 >
@@ -4654,7 +4651,6 @@ const Portfolio = () => {
                     <textarea
                       name="message"
                       placeholder="Write your message..."
-                      required
                     ></textarea>
                   </div>
 
@@ -5267,7 +5263,7 @@ const Portfolio = () => {
           margin: 0;
         }
 
-        /* ================= SECTIONS ================= */
+        /* ================= ABOUT SECTIONS ================= */
         section {
           scroll-margin-top: 80px;
         }
@@ -5323,6 +5319,8 @@ const Portfolio = () => {
           border: 1px solid rgba(255, 255, 255, 0.07);
           background: #0c1b20;
           transition: 0.35s ease;
+          display: flex;
+          flex-direction: column;
         }
 
         .about-info:hover,
@@ -5331,7 +5329,8 @@ const Portfolio = () => {
           border-color: rgba(32, 201, 151, 0.35);
         }
 
-        .about-icon {
+        .about-icon,
+        .education-icon {
           width: 60px;
           height: 60px;
           border-radius: 14px;
@@ -5344,60 +5343,45 @@ const Portfolio = () => {
           margin-bottom: 25px;
         }
 
-        .about-info h3 {
+        .about-info h3,
+        .education-card h3 {
           font-size: 25px;
           margin-bottom: 18px;
+          color: #ffffff;
         }
 
-        .about-info p {
+        .about-info p,
+        .education-card p {
           color: #91a3a9;
           line-height: 1.8;
           margin-bottom: 14px;
         }
 
-        .education-card h3 {
-          font-size: 25px;
-          margin-bottom: 28px;
-        }
-
         .education-item {
           display: flex;
-          gap: 18px;
-          align-items: center;
-        }
-
-        .education-icon {
-          min-width: 55px;
-          height: 55px;
-          border-radius: 12px;
-          background: rgba(32, 201, 151, 0.1);
-          color: #20c997;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 23px;
+          flex-direction: column;
         }
 
         .education-item h4 {
           font-size: 20px;
+          color: #ffffff;
+          margin-bottom: 8px;
         }
 
         .education-item p {
-          color: #d0dcdf;
-          margin-top: 4px;
+          margin-bottom: 6px;
         }
 
         .education-item span {
-          color: #74888e;
-          font-size: 14px;
+          color: #667c82;
+          font-size: 13px;
           display: block;
-          margin-top: 5px;
         }
 
         .cgpa-box {
-          margin-top: 35px;
-          padding: 22px;
-          border-radius: 14px;
+          margin-top: auto;
+          padding: 16px 20px;
+          border-radius: 12px;
           background: rgba(32, 201, 151, 0.05);
           border: 1px solid rgba(32, 201, 151, 0.12);
           display: flex;
@@ -5408,19 +5392,19 @@ const Portfolio = () => {
         .cgpa-box span {
           display: block;
           color: #83969b;
-          font-size: 14px;
+          font-size: 13px;
         }
 
         .cgpa-box strong {
           display: block;
-          font-size: 25px;
+          font-size: 22px;
           color: #20c997;
-          margin-top: 5px;
+          margin-top: 3px;
         }
 
         .cgpa-circle {
-          width: 65px;
-          height: 65px;
+          width: 50px;
+          height: 50px;
           border-radius: 50%;
           border: 2px solid #20c997;
           display: flex;
@@ -5428,7 +5412,7 @@ const Portfolio = () => {
           justify-content: center;
           color: #20c997;
           font-weight: 800;
-          font-size: 18px;
+          font-size: 16px;
         }
 
         /* ================= SKILLS ================= */
@@ -5853,8 +5837,8 @@ const Portfolio = () => {
         .send-btn {
           height: 52px;
           padding: 0 25px;
-          border: 1px solid #20c997;
           border-radius: 8px;
+          border: 1px solid white;
           background: #20c997;
           color: #06110e;
           font-weight: 800;
@@ -5868,8 +5852,8 @@ const Portfolio = () => {
         }
 
         .send-btn:hover {
-          background: transparent;
-          color: #20c997;
+          background: white;
+          color: black;
           transform: translateY(-3px);
         }
 
@@ -6114,7 +6098,7 @@ const Portfolio = () => {
             padding: 7px 9px;
           }
         }
-      `}</style>
+`}</style>
     </>
   );
 };
