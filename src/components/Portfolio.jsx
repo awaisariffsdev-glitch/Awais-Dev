@@ -1190,7 +1190,7 @@ const Portfolio = () => {
         .primary-btn {
           border: 1px solid #20c997;
           background: #20c997;
-          color: #06110e;
+          color: white;
         }
 
         .primary-btn:hover {
@@ -1969,7 +1969,7 @@ const Portfolio = () => {
           border-radius: 8px;
           border: 1px solid #20c997 ;
           background: #20c997;
-          color: #06110e;
+          color: white;
           font-weight: 800;
           display: flex;
           align-items: center;
